@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Live Video Stream</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/video.js/8.5.0/video-js.min.css" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/video.js/8.5.0/video.min.js"></script>
+    <style>
+        body {
+            background: url('https://wallpapercave.com/wp/wp7489540.jpg') no-repeat center center fixed;
+            background-size: cover;
+            text-align: center;
+            color: white;
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            margin-top: 50px;
+        }
+        .video-container {
+            display: inline-block;
+            background: rgba(0, 0, 0, 0.7);
+            padding: 20px;
+            border-radius: 10px;
+        }
+        button {
+            background-color: #0088cc;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            margin: 10px;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        button:hover {
+            background-color: #005f99;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <a href="https://t.me/aniweshstorage" target="_blank">
+            <button>Join Our Telegram Channel</button>
+        </a>
+    </div>
+    
+    <div class="video-container">
+        <video id="live-video" class="video-js vjs-default-skin" controls autoplay width="720" height="400">
+            <source src="https://lx40.net/m/UK_SKY_SPORTS_CRICKET/index.m3u8?token=b0666ece29a32ca37814ea2346a93679" type="application/x-mpegURL">
+            Your browser does not support the video tag.
+        </video>
+    </div>
+    
+    <script>
+        var player = videojs('live-video');
+        player.play();
+    </script>
+</body>
+</html>
